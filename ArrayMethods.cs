@@ -4,17 +4,17 @@ string[] karakterler = new string[3];
 int[] canlar = new int[3];
 
 Console.Write("Lütfen 1 karakter ismi giriniz: ");
-karakterler[0] = Console.ReadLine();
+karakterler[0] = Console.ReadLine() ?? "";
 Console.Write("Lütfen 1 karakter canını giriniz: ");
 canlar[0] = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Lütfen 2 karakter ismi giriniz: ");
-karakterler[1] = Console.ReadLine();
+karakterler[1] = Console.ReadLine() ?? "";
 Console.Write("Lütfen 2 karakter canını giriniz: ");
 canlar[1] = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Lütfen 3 karakter ismi giriniz: ");
-karakterler[2] = Console.ReadLine();
+karakterler[2] = Console.ReadLine() ?? "";
 Console.Write("Lütfen 3 karakter canını giriniz: ");
 canlar[2] = Convert.ToInt32(Console.ReadLine());
 
@@ -32,4 +32,5 @@ foreach (var karakter in karakterler[..2])
 //Karakterlerin can ortalamasını hesaplama ve ekrana yazdırma
 int toplamCan = canlar[0] + canlar[1] + canlar[2];
 int ortalamaCan = toplamCan / 3;
+
 Console.WriteLine("Karakterlerin ortalama canı: " + ortalamaCan);
