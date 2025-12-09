@@ -1,32 +1,20 @@
-﻿//fark kat hesaplama
+﻿//Oyunu oynuyabilme durumu
 
-int char1 = 10;
-int char2 = 5;
-int char3 = 20;
+Console.Write("Yaşınızı giriniz:");
+var yas = Convert.ToInt32(Console.ReadLine());
+bool oyunuOynayabilmeDurumu = (yas >= 18);
+Console.WriteLine("Oyunu oynayabilme durumu: " + oyunuOynayabilmeDurumu);
 
-var fark = (char1 + char3) * char2;
-Console.WriteLine("Fark Kat Hesaplama Sonucu: " + fark);
+//Sayı pozitif mi?
 
-//basit toplama null olabilme ihtimaliyle 
+Console.Write("Bir sayı giriniz:");
+var sayi = Convert.ToInt32(Console.ReadLine());
+var sayiPozitifMi = (sayi > 0) ? "sayı pozitif" : "sayı pozitif değil";
+Console.WriteLine(sayiPozitifMi);
 
-int? karakter1 = 10;
-int karakter2 = 20; 
+//Sayı çift mi?
 
-var toplam = karakter1 + karakter2;
-Console.WriteLine("Toplam Sonucu: " + toplam);
-
-//atama operatörü
-
-int a = 5;
-int b = 10;
-a = b--;
-Console.WriteLine("Atama Operatörü Sonucu: " + a);
-
-//sayı tekmi çiftmi
-
-Console.WriteLine("Bir sayı giriniz:");
-int sayi = Convert.ToInt32(Console.ReadLine() ?? "0");
-var sonuc = sayi % 2;
-Console.WriteLine(sonuc == 0 ? "Sayı çifttir." : "Sayı tektir.");
-//yada 
-Console.WriteLine(sonuc); //0 ise çift 1 ise tek
+Console.Write("Bir sayı giriniz:");
+sayi = Convert.ToInt32(Console.ReadLine());
+var sayiCiftMi = (sayi % 2 == 0) ? "sayı çift" : "sayı tek";
+Console.WriteLine(sayiCiftMi);
